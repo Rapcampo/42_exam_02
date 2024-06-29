@@ -9,8 +9,8 @@ int	ft_atoi(const char *str)
 	while (str[++i] == ' ' || (str[i] >= 9 && str[i] <= 13));
 	if (str[i] == '-')
 	{
-			sign = -1;
-			i++;
+		sign = -1;
+		i++;
 	}
 	while (str[i] && (str[i] >= '0' && str[i] <= '9'))
 		num = num * 10 + (str[i++] - '0');
