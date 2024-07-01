@@ -31,8 +31,11 @@ void	add_prime_sum(int nbr)
 {
 	int sum = 0;
 	while (nbr > 0)
-		if (is_prime(nbr--))
+	{
+		if (is_prime(nbr))
 			sum += nbr;
+		nbr--;
+	}
 	ft_putnbr(sum);
 }
 
