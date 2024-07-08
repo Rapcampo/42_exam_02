@@ -1,7 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int	gcd(int a, int b)
+{
+	return(b ? gcd(b, a % b) : a);
+}
+
 unsigned int lcm(unsigned int a, unsigned int b)
+{
+	return ((a * b) / gcd(a, b));
+}
+
+/*unsigned int lcm(unsigned int a, unsigned int b)
 {
 	unsigned int n;
 	if (a == 0 || b == 0)
@@ -16,7 +26,7 @@ unsigned int lcm(unsigned int a, unsigned int b)
 			return (n);
 		n++;
 	}
-}
+}*/
 
 int	main(int argc, char **argv)
 {
